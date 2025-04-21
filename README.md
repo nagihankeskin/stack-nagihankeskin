@@ -1,99 +1,39 @@
-"""
-README.py - Documentation and Execution for Stack Implementation Using Linked Lists
-Author: Nagihan
-Description: This Python script serves as both documentation (README) and 
-a functional file that explains and tests the Stack implementation using Linked Lists.
-"""
+# 📦 Stack Implementation Using Linked Lists
 
-# Importing the Stack class from the ds module
-from ds import Stack
+This project is developed for **Assignment #3** of the Data Structures course. The objective is to implement a **Stack** using **Linked Lists** in Python and manage the development using **Git and GitHub**.
 
-# Display project details as documentation
-def project_overview():
-    print("""
-    ============================
-    Stack Implementation Using Linked Lists
-    ============================
+---
 
-    Project Overview:
-    This project demonstrates the implementation of a stack (LIFO - Last In First Out)
-    data structure using linked lists. The tasks include:
-    - Creating a stack class using linked list data structure.
-    - Implementing stack operations: push(), pop(), and peek().
-    - Testing the stack implementation via this script.
-    """)
+## ✅ Task Summary
 
-# Display class descriptions
-def class_descriptions():
-    print("""
-    Class Definitions:
-    1. LinkedListNode:
-       - Represents a node in the linked list.
-       - Inherits from the Node class.
+- Transfer files from the template repository  
+- Create a new branch for development  
+- Implement the `ds.py` module with:
+  - `LLNode`, `LinkedList`, `Stack` classes
+- Ensure `main_LL.py` runs successfully  
+- Make at least 2 commits  
+- Merge the branch when completed
 
-    2. LinkedList:
-       - Provides linked list functionalities.
-       - add_node(node, index): Adds a node at the specified index.
-       - remove_node(index): Removes a node from the specified index.
+---
 
-    3. Stack:
-       - Implements the stack operations using a linked list.
-       - push(data): Adds a node to the top of the stack.
-       - pop(): Removes the top node from the stack.
-       - peek(): Returns the top node without removing it.
-    """)
+## 🔧 Class Overview
 
-# Display setup and usage instructions
-def setup_and_usage():
-    print("""
-    Setup and Execution:
-    1. Clone the repository:
-       git clone <repository-link>
+| Class        | Description                                           |
+|--------------|--------------------------------------------------------|
+| `Node`       | Basic data holder with ID, coordinates, and name      |
+| `LLNode`     | Inherits from `Node`, adds `next` for linked list     |
+| `LinkedList` | Adds/removes nodes at specific positions              |
+| `Stack`      | Uses `LinkedList` to implement `push`, `pop`, `peek`  |
 
-    2. Navigate to the repository folder:
-       cd <repository-folder>
+---
 
-    3. Ensure Python 3.x is installed and run this script to test:
-       python README.py
-    """)
+## 🔀 Git Workflow
 
-# Test the Stack Implementation
-def test_stack():
-    print("\nTesting the Stack Implementation:\n")
-    
-    # Creating a stack
-    stack = Stack()
-    print("Created a new stack.")
-
-    # Push operations
-    print("Pushing 10 onto the stack.")
-    stack.push(10)
-    print("Pushing 20 onto the stack.")
-    stack.push(20)
-    print("Pushing 30 onto the stack.")
-    stack.push(30)
-
-    # Peek operation
-    print(f"Top element (peek): {stack.peek()}")
-
-    # Pop operations
-    print(f"Popped element: {stack.pop()}")
-    print(f"Popped element: {stack.pop()}")
-    print(f"Top element (peek): {stack.peek()}")
-    
-    # Final pop
-    print(f"Popped element: {stack.pop()}")
-    
-    # Try popping from an empty stack
-    try:
-        stack.pop()
-    except IndexError as e:
-        print(f"Error: {e}")
-
-# Main function to execute the script
-if __name__ == "__main__":
-    print("Welcome to README.py for Stack Implementation\n")
-    project_overview()
-    class_descriptions()
-    setup_and_usage()
-    test_stack()
+```bash
+git clone <repo-url>
+git checkout -b stack-implementation
+# work and commit at least twice
+git add .
+git commit -m "Implemented Stack using Linked List"
+git checkout main
+git merge stack-implementation
